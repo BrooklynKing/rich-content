@@ -28,7 +28,7 @@ const testPlugins = [
 ];
 
 module.exports = {
-  presets: [presetEnvESM, ...commonPresets],
+  presets: [presetEnvESM, ...commonPresets, "flow"],
   plugins: [...commonPlugins],
   env: {
     commonjs: {

@@ -13,7 +13,8 @@
     "watch": "lerna run --parallel watch",
     "test": "lerna run --parallel test",
     "customPublish": "node scripts/customPublish",
-    "createVersion": "node scripts/createVersion"
+    "createVersion": "node scripts/createVersion",
+    "flow": "flow"
   },
   "husky": {
     "hooks": {
@@ -31,9 +32,11 @@
     "@babel/preset-stage-2": "^7.0.0-beta.52",
     "@babel/runtime": "^7.0.0-beta.52",
     "@svgr/cli": "^2.0.0",
+    "babel-cli": "^6.26.0",
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^23.2.0",
     "babel-loader": "^8.0.0-beta.4",
+    "babel-preset-flow": "^6.23.0",
     "chalk": "^2.4.1",
     "copy-webpack-plugin": "^4.5.1",
     "create-index": "^2.3.0",
@@ -44,6 +47,7 @@
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-lodash": "^2.7.0",
     "eslint-plugin-react": "^7.7.0",
+    "flow-bin": "^0.77.0",
     "husky": "^1.0.0-rc.6",
     "lerna": "^2.10.0",
     "loader-utils": "^1.1.0",
