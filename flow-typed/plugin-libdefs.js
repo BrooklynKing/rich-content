@@ -6,7 +6,8 @@ declare type PluginMapping = {
   classNameStrategies?: {
     size?: Function,
     alignment?: Function,
-    textWrap?: Function
+    textWrap?: Function,
+    container?: Function
   },
   elementType?: ElementType
 };
