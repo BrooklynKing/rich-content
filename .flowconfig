@@ -1,14 +1,14 @@
 [ignore]
+node_modules
 .*/dist/.*
 .*/node_modules/.*
 .*/.history/.*
 .*/.vscode/.*
 
 [include]
-./packages/**/src/.*
-./examples/**/src/.*
 
 [libs]
+./flow-typed
 
 [lints]
 
@@ -18,4 +18,3 @@
 
 [version]
 ^0.77.0
-

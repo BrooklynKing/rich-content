@@ -1,13 +1,17 @@
 {
+  "parser": "babel-eslint",
   "extends": ["wix/react", "plugin:jsx-a11y/strict"],
   "env": {
     "browser": true,
     "node": true
   },
-  "plugins": ["lodash", "fp", "jsx-a11y"],
+  "plugins": ["lodash", "fp", "jsx-a11y", "flowtype"],
   "settings": {
     "react": {
       "version": "15.5.4"
+    },
+    "flowtype": {
+      "onlyFilesWithFlowAnnotation": false
     }
   },
   "rules": {
