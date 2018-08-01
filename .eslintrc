@@ -9,9 +9,6 @@
   "settings": {
     "react": {
       "version": "15.5.4"
-    },
-    "flowtype": {
-      "onlyFilesWithFlowAnnotation": false
     }
   },
   "rules": {

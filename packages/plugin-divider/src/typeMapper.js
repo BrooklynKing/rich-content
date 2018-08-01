@@ -1,3 +1,4 @@
+// @flow
 /* global PluginMapping */
 
 import DividerComponent from './components/divider-component';
