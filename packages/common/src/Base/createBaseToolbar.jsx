@@ -163,7 +163,7 @@ export default function createToolbar({ buttons, theme, pubsub, helpers, isMobil
     scrollToolbar(event, leftDirection) {
       event.preventDefault();
       const { clientWidth, scrollWidth } = this.scrollContainer;
-      this.scrollContainer.scrollLeft = leftDirection ? 0 : scrollWidth - clientWidth;
+      this.scrollContainer.scrollLeft = leftDirection ? 0 : Math.min(this.scrollContainer.scrollLeft + clientWidth, scrollWidth);
     }
 
     renderButton = (button, key, themedStyle, separatorClassNames, tabIndex) => {
@@ -286,12 +286,11 @@ export default function createToolbar({ buttons, theme, pubsub, helpers, isMobil
 
     setToolbarScrollButton = (scrollLeft, scrollWidth, clientWidth) => {
       const currentScrollButtonWidth = this.state.showLeftArrow || this.state.showRightArrow ? 20 : 0;
-
       const isScroll = scrollWidth - clientWidth - currentScrollButtonWidth > 8;
 
       this.setState({
-        showLeftArrow: isScroll && scrollLeft > 2,
-        showRightArrow: isScroll && scrollLeft <= 2
+        showLeftArrow: isScroll && scrollLeft === scrollWidth - clientWidth,
+        showRightArrow: isScroll && scrollLeft < scrollWidth - clientWidth
       });
     };
 

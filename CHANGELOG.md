@@ -6,6 +6,39 @@
 > - :bug:        [Bug Fix]
 > - :house:      [Internal]
 
+## 1.2.11 (Aug 7, 2018)
+
+#### :rocket: New Feature
+* `general`
+  * [#78](https://github.com/wix-incubator/rich-content/pull/78) `handleFileSelection` helper is passed `componentData` as param
+  * allow responsive toolbars to scroll beyond 2 pages
+  * fixed plugin inline buttons & inline dropdown button alignment
+
+#### :bug: Bug Fix
+* `general` 
+  * `postcss` no londer renames @rules such as @keyframes
+* `editor`
+  * mobile toolbar respects `textButtons` array order
+
+<br />
+
+## 1.2.10 (Aug 6, 2018)
+
+#### :bug: Bug Fix
+* `common` 
+  * [#70](https://github.com/wix-incubator/rich-content/issues/70) use `button.componentData` to be consistent with `InlineButtons`
+* `plugin-image`
+  * update editorState as well as componentData on upload
+* `plugin-gallery`
+  * update editorState as well as componentData on upload
+  * invoke `stateFromProps` only when a change has occured
+
+#### :house: Internal
+* `general`
+  * [#82](https://github.com/wix-incubator/rich-content/pull/82) Transpile using rollup
+
+<br />
+
 ## 1.2.9 (Aug 2, 2018)
 
 #### :house: Internal

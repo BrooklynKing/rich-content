@@ -33,7 +33,7 @@ export default class StaticToolbar extends React.Component {
   scrollToolbar(event, leftDirection) {
     event.preventDefault();
     const { clientWidth, scrollWidth } = this.scrollContainer;
-    this.scrollContainer.scrollLeft = leftDirection ? 0 : scrollWidth - clientWidth;
+    this.scrollContainer.scrollLeft = leftDirection ? 0 : Math.min(this.scrollContainer.scrollLeft + clientWidth, scrollWidth);
   }
 
   setToolbarScrollButton = (scrollLeft, scrollWidth, clientWidth) => {
@@ -41,8 +41,8 @@ export default class StaticToolbar extends React.Component {
     const isScroll = scrollWidth - clientWidth - currentScrollButtonWidth > 8;
 
     this.setState({
-      showLeftArrow: isScroll && scrollLeft > 2,
-      showRightArrow: isScroll && scrollLeft <= 2
+      showLeftArrow: isScroll && scrollLeft === scrollWidth - clientWidth,
+      showRightArrow: isScroll && scrollLeft < scrollWidth - clientWidth
     });
   };
 

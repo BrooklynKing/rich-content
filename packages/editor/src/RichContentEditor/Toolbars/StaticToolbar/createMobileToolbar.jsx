@@ -104,9 +104,9 @@ const getMobileTheme = theme => {
 const getMobileButtons = ({ buttons, pluginTextButtonMappers, helpers, pubsub, getEditorState, setEditorState, mobileTheme, t }) => {
   const pluginButtons = reducePluginTextButtons(pluginTextButtonMappers, buttonData => buttonData.isMobile !== false);
   const pluginButtonNames = reducePluginTextButtonNames(pluginTextButtonMappers, buttonData => buttonData.isMobile !== false);
-  const mergedList = mergeButtonLists(MobileTextButtonList, pluginButtonNames, 'mobile');
   const requestedButtons = get(buttons, 'textButtons.mobile');
-  const textButtons = Array.isArray(requestedButtons) ? [...requestedButtons] : [...mergedList];
+  const textButtonsList = requestedButtons || MobileTextButtonList;
+  const textButtons = mergeButtonLists(textButtonsList, pluginButtonNames, 'mobile');
   const addPluginIndex = textButtons.findIndex(b => b === 'AddPlugin');
 
   if (addPluginIndex !== -1) {

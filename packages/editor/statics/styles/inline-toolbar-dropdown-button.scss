@@ -5,21 +5,19 @@
 }
 
 .inlineToolbarDropdown_options {
-    position: absolute;
-    top: 10px;
-    left: -3px;
-    padding: 0 3px;
-    background: white;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 0 4px 0 rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 10px;
+  left: -3px;
+  padding: 0 3px;
+  background: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 0 4px 0 rgba(0, 0, 0, 0.1);
 }
 
 .inlineToolbarDropdownButton_wrapper {
-  margin-right: 0;
-  padding: 0;
+  margin-right: 0 !important;
+  padding: 0 !important;
 }
 
-.inlineToolbarDropdownButton {
-}
+.inlineToolbarDropdownButton {}
 
-.inlineToolbarDropdownButton_icon {
-}
+.inlineToolbarDropdownButton_icon {}

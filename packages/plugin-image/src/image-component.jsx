@@ -104,9 +104,16 @@ class ImageComponent extends React.Component {
   };
 
   handleFilesAdded = ({ data, error }) => {
+    //when updating componentData on an async method like this one,
+    // we need to use a sync method to change the EditorState.
+    // The broadcast is good if the toolbar is displaying some status or image
+    this.props.componentData.src = data;
+    const { setData } = this.props.blockProps;
+    setData(this.props.componentData);
+
     this.props.store.update('componentData', { src: data });
     this.resetLoadingState(error);
-  }
+  };
 
   getLoadingParams = componentState => {
     //check if the file upload is coming on the regular state

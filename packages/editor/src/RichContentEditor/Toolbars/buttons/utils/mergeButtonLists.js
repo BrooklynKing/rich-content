@@ -20,5 +20,5 @@ export const mergeButtonLists = (sourceList, positionedList, formFactor = 'deskt
       return merged;
     }
     return mergedList;
-  }, sourceList);
+  }, [...sourceList]);
 };

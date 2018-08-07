@@ -7,8 +7,6 @@ import {
   LayoutPanoramaIcon,
   LayoutColumnsIcon,
   LayoutSlidesIcon,
-} from '../../statics/icons';
-import {
   Grid as GridIconSmall,
   Masonry as MasonryIconSmall,
   Collage as CollageIconSmall,
@@ -17,7 +15,7 @@ import {
   Panorama as PanoramaIconSmall,
   Columns as ColumnsIconSmall,
   Slides as SlidesIconSmall,
-} from '../../statics/icons';
+} from '../icons';
 
 
 import layoutData from './layout-data-provider';
